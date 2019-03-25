@@ -7,7 +7,7 @@
     "build": "npx tsc",
     "test": "npx ava"
   },
-  "author": "",
+  "author": "Johan Stén <johan@futuretense.io>",
   "license": "MIT",
   "dependencies": {
     "elliptic": "^6.4.1",
