@@ -16,7 +16,7 @@
     "secure-random": "^1.1.1"
   },
   "optionalDependencies": {
-    "@futuretense/ed25519-dalek": "0.0.2"
+    "@futuretense/ed25519-dalek": "0.0.3"
   },
   "devDependencies": {
     "@types/node": "^11.9.5",
