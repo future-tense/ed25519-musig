@@ -1,2 +1,6 @@
 .idea
 src
+test
+.DS_Store
+tsconfig.json
+lib/tsconfig.tsbuildinfo
