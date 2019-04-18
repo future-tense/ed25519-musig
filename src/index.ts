@@ -3,7 +3,7 @@ import * as elliptic from './elliptic/musig';
 
 let hasDalek = false;
 try {
-    hasDalek = require('ed25519-dalek');
+    hasDalek = require('@futuretense/ed25519-dalek');
 } catch (err) {}
 
 const musig = hasDalek ? require('./dalek/musig') : elliptic;
