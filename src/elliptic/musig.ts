@@ -232,7 +232,7 @@ export class Session {
             .mul(this.kp.scalar).umod(ell)
             .add(this.nonceKeys.scalar).umod(ell);
 
-        return ec.encodeInt(sig);
+        return Buffer.from(ec.encodeInt(sig));
     }
 
     public setRemoteSignature(keyBuf: Buffer, signature: Buffer) {
@@ -264,7 +264,7 @@ export class Session {
         const nonce = this.nonce(key);
         const res = kp.mul(ae).add(nonce);
 
-        const s = ec.decodeInt(signature);
+        const s = ec.decodeInt(Array.from(signature));
         const sp = basepoint.mul(s);
         return sp.eq(res);
     }
@@ -274,7 +274,7 @@ export class Session {
             throw 'Not enough nonces set yet!';
         }
 
-        const sig = ec.decodeInt(signature);
+        const sig = ec.decodeInt(Array.from(signature));
         this.signature.set(key, sig);
         this._nonce.delete(key);
 
