@@ -10,7 +10,7 @@ const ell = ec.curve.n;
 type Point = typeof basepoint;
 type Scalar = typeof ell;
 
-export const enum Round {
+export enum Round {
     commitment = 0,
     nonce = 1,
     signature = 2,
