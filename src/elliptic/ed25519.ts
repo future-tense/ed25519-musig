@@ -3,10 +3,10 @@
  * The Edwards digital signing algorithm, using the "ed25519" curve
  */
 
-import { eddsa } from 'elliptic';
+import { eddsa as Eddsa} from 'elliptic';
 import * as secureRandom from 'secure-random';
 
-const ec = new eddsa('ed25519');
+const ec = new Eddsa('ed25519');
 
 type Scalar = typeof ec.curve.n;
 
